@@ -58,7 +58,7 @@ services:
    
     environment:
         # Don't enclose values in quotes
-        - AUTO_UPDATE=${AUTO_UPDATE:-false}
+        - AUTO_UPDATE=${AUTO_UPDATE:-true}
         - DIRECT_ADDRESS=${DIRECT_ADDRESS:-127.0.0.1}
         - DIRECT_ADDRESS_GET_WAN=${DIRECT_ADDRESS_GET_WAN:-false}
         - WORKSPACE=${WORKSPACE:-/workspace}
