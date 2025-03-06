@@ -65,6 +65,7 @@ NODES=(
     "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes"
     "https://github.com/pythongosssss/ComfyUI-Custom-Scripts"
     "https://github.com/rgthree/rgthree-comfy"
+    "https://github.com/DoctorDiffusion/ComfyUI-BEN"
     #"https://github.com/krich-cto/ComfyUI-Flow-Control"
 )
 
