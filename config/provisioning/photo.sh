@@ -39,6 +39,7 @@ PIP_PACKAGES=(
     "sentencepiece"
     "spandrel"
     "peft"
+    "torchvision"
 )
 
 NODES=(
