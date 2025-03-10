@@ -70,26 +70,68 @@ NODES=(
     #"https://github.com/krich-cto/ComfyUI-Flow-Control"
 )
 
-CHECKPOINT_MODELS=()
+CHECKPOINT_MODELS=(
+    "https://huggingface.co/RunDiffusion/Juggernaut-XI-v11/blob/main/Juggernaut-XI-byRunDiffusion.safetensor|s"
+    "https://huggingface.co/moiu2998/mymo/blob/main/realisticVisionV60B1_v51VAE.safetensors|"
+    )
 
 UNET_MODELS=(
-
+"https://huggingface.co/jackzheng/flux-fill-FP8/blob/main/fluxFillFP8_v10.safetensors|"
+"https://huggingface.co/black-forest-labs/FLUX.1-dev/blob/main/vae/diffusion_pytorch_model.safetensors|FLUX.1-dev"
 )
 
 LORA_MODELS=(
     #"https://civitai.com/api/download/models/16576"
+    "https://huggingface.co/xiaozaa/catvton-flux-lora-alpha/blob/main/pytorch_lora_weights.safetensors|CatVitOnLora.safetensors"
+    "https://huggingface.co/alimama-creative/FLUX.1-Turbo-Alpha/blob/main/diffusion_pytorch_model.safetensors|FLUX.1-Turbo-Alpha.safetensors"
 )
 
 VAE_MODELS=()
 
-ESRGAN_MODELS=()
+FLUX_VAE_MODELS=(
+    "https://huggingface.co/black-forest-labs/FLUX.1-dev/blob/main/vae/diffusion_pytorch_model.safetensors|ae.sft"
+)
 
-CONTROLNET_MODELS=()
+SEGFORMER_B3_CLOTHES=(
+    "https://huggingface.co/sayeed99/segformer_b3_clothes/blob/main/model.safetensors|segformer_b3_clothes.safetensors"
+)
+
+CLIP_MODELS=(
+    "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/clip_l.safetensors|"
+    "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp16.safetensors|"
+)
+
+CLIP_VISION=(
+    "https://huggingface.co/google/siglip-so400m-patch14-384/blob/main/model.safetensors|siglip-so400m-patch14-384.safetensors"
+)
+
+ESRGAN_MODELS=(
+   "https://huggingface.co/ai-forever/Real-ESRGAN/resolve/main/RealESRGAN_x4.pth|"
+)
+
+CONTROLNET_MODELS=(
+    "https://huggingface.co/InstantX/FLUX.1-dev-Controlnet-Union/blob/main/diffusion_pytorch_model.safetensors|FLUX.1-dev-Controlnet-Unio.safetensors"
+    "https://huggingface.co/brad-twinkl/controlnet-union-sdxl-1.0-promax/blob/main/diffusion_pytorch_model.safetensors|controlnet-union-sdxl-1.0-promax.safetensors"
+)
+EMBEDDINGS=(
+"https://civitai.com/models/72437/baddream-unrealisticdream-negative-embeddings"
+)
+
+STYLE_MODELS=(
+    "https://huggingface.co/black-forest-labs/FLUX.1-Redux-dev/blob/main/flux1-redux-dev.safetensors|"
+)
+
+IC_LIGHT_MODELS=(
+    "https://huggingface.co/huchenlei/IC-Light-ldm/blob/main/iclight_sd15_fc_unet_ldm.safetensors|"
+)
+RESADAPTER_V2_SD15=(
+"https://huggingface.co/jiaxiangc/res-adapter/blob/main/resadapter_v2_sd1.5/pytorch_lora_weights.safetensors|resadapter_v2_sd1.5"
+)
 
 ### DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING ###
 
 function provisioning_start() {
-    if [[ ! -d /opt/environments/python ]]; then 
+    if [[ ! -d /opt/environments/python ]] || [[ -z "$(ls -A /opt/environments/python)" ]]; then 
         export MAMBA_BASE=true
     fi
     source /opt/ai-dock/etc/environment.sh
@@ -100,23 +142,47 @@ function provisioning_start() {
     provisioning_get_nodes
     provisioning_get_pip_packages
     provisioning_get_models \
-        "${WORKSPACE}/storage/stable_diffusion/models/ckpt" \
+        "${WORKSPACE}/ComfyUI/models/ckpt" \
         "${CHECKPOINT_MODELS[@]}"
     provisioning_get_models \
-        "${WORKSPACE}/storage/stable_diffusion/models/unet" \
+        "${WORKSPACE}/ComfyUI/models/unet" \
         "${UNET_MODELS[@]}"
     provisioning_get_models \
-        "${WORKSPACE}/storage/stable_diffusion/models/lora" \
+        "${WORKSPACE}/ComfyUI/models/lora" \
         "${LORA_MODELS[@]}"
     provisioning_get_models \
-        "${WORKSPACE}/storage/stable_diffusion/models/controlnet" \
+        "${WORKSPACE}/ComfyUI/models/controlnet" \
         "${CONTROLNET_MODELS[@]}"
     provisioning_get_models \
-        "${WORKSPACE}/storage/stable_diffusion/models/vae" \
+        "${WORKSPACE}/ComfyUI/models/embeddings" \
+        "${EMBEDDINGS[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}/ComfyUI/models/vae" \
         "${VAE_MODELS[@]}"
     provisioning_get_models \
-        "${WORKSPACE}/storage/stable_diffusion/models/esrgan" \
+        "${WORKSPACE}/ComfyUI/models/clip" \
+        "${CLIP_MODELS[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}/ComfyUI/models/vae/FLUX1" \
+        "${FLUX_VAE_MODELS[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}/ComfyUI/models/clip_vision" \
+        "${CLIP_VISION[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}/ComfyUI/models/segformer_b3_clothes" \
+        "${SEGFORMER_B3_CLOTHES[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}/ComfyUI/models/esrgan" \
         "${ESRGAN_MODELS[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}/ComfyUI/models/style_models" \
+        "${STYLE_MODELS[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}/ComfyUI/models/unet/IC_Light" \
+        "${IC_LIGHT_MODEL[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}/ComfyUI/models/res-adapter/resadapter_v2_sd1.5" \
+        "${RESADAPTER_V2_SD15[@]}"
     provisioning_print_end
 }
 
@@ -135,9 +201,7 @@ function provisioning_get_apt_packages() {
 }
 
 function provisioning_get_pip_packages() {
-    if [[ -n $PIP_PACKAGES ]]; then
-            pip_install ${PIP_PACKAGES[@]}
-    fi
+    pip install "${PIP_PACKAGES[@]}"
 }
 
 function provisioning_get_nodes() {
@@ -173,17 +237,24 @@ function provisioning_get_default_workflow() {
 }
 
 function provisioning_get_models() {
-    if [[ -z $2 ]]; then return 1; fi
-    
-    dir="$1"
-    mkdir -p "$dir"
-    shift
-    arr=("$@")
-    printf "Downloading %s model(s) to %s...\n" "${#arr[@]}" "$dir"
-    for url in "${arr[@]}"; do
-        printf "Downloading: %s\n" "${url}"
-        provisioning_download "${url}" "${dir}"
-        printf "\n"
+    local dest_dir="$1"
+    shift  # Remove o primeiro argumento (diretório de destino)
+
+    mkdir -p "$dest_dir"  # Garante que o diretório existe
+
+    for item in "$@"; do
+        IFS='|' read -r url target <<< "$entry"
+        if [[ -z "$target" ]]; then
+            target=$(basename "$url")  # Extrai o nome do arquivo da URL
+        fi
+        dest_file="${dest_dir}/${filename}"
+
+        if [[ -f "$dest_file" ]]; then
+            echo "O arquivo $filename já existe. Pulando download..."
+        else
+            echo "Baixando $url como $filename..."
+            curl -L -o "$dest_file" "$url"
+        fi
     done
 }
 
