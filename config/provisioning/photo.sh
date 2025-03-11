@@ -85,7 +85,7 @@ CHECKPOINT_MODELS=(
 
 UNET_MODELS=(
 "https://huggingface.co/jackzheng/flux-fill-FP8/resolve/main/fluxFillFP8_v10.safetensors?download=true|"
-"https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/vae/diffusion_pytorch_model.safetensors?download=true|FLUX.1-dev"
+"https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/flux1-dev.safetensors?download=true|FLUX.1-dev"
 )
 
 LORA_MODELS=(
@@ -132,6 +132,7 @@ STYLE_MODELS=(
 IC_LIGHT_MODELS=(
     "https://huggingface.co/huchenlei/IC-Light-ldm/resolve/main/iclight_sd15_fc_unet_ldm.safetensors|"
 )
+
 RESADAPTER_V2_SD15=(
 "https://huggingface.co/jiaxiangc/res-adapter/resolve/main/resadapter_v2_sd1.5/pytorch_lora_weights.safetensors|resadapter_v2_sd1.5"
 )
@@ -187,7 +188,7 @@ function provisioning_start() {
         "${STYLE_MODELS[@]}"
     provisioning_get_models \
         "${WORKSPACE}ComfyUI/models/unet/IC_Light" \
-        "${IC_LIGHT_MODEL[@]}"
+        "${IC_LIGHT_MODELS[@]}"
     provisioning_get_models \
         "${WORKSPACE}ComfyUI/models/res-adapter/resadapter_v2_sd1.5" \
         "${RESADAPTER_V2_SD15[@]}"
