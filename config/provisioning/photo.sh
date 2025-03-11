@@ -71,29 +71,29 @@ NODES=(
 )
 
 CHECKPOINT_MODELS=(
-    "https://huggingface.co/RunDiffusion/Juggernaut-XI-v11/blob/main/Juggernaut-XI-byRunDiffusion.safetensor|"
-    "https://huggingface.co/moiu2998/mymo/blob/main/realisticVisionV60B1_v51VAE.safetensors|"
+    "https://huggingface.co/RunDiffusion/Juggernaut-XI-v11/resolve/main/Juggernaut-XI-byRunDiffusion.safetensor|"
+    "https://huggingface.co/moiu2998/mymo/resolve/main/realisticVisionV60B1_v51VAE.safetensors|"
     )
 
 UNET_MODELS=(
-"https://huggingface.co/jackzheng/flux-fill-FP8/blob/main/fluxFillFP8_v10.safetensors|"
-"https://huggingface.co/black-forest-labs/FLUX.1-dev/blob/main/vae/diffusion_pytorch_model.safetensors|FLUX.1-dev"
+"https://huggingface.co/jackzheng/flux-fill-FP8/resolve/main/fluxFillFP8_v10.safetensors|"
+"https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/vae/diffusion_pytorch_model.safetensors|FLUX.1-dev"
 )
 
 LORA_MODELS=(
     #"https://civitai.com/api/download/models/16576"
-    "https://huggingface.co/xiaozaa/catvton-flux-lora-alpha/blob/main/pytorch_lora_weights.safetensors|CatVitOnLora.safetensors"
-    "https://huggingface.co/alimama-creative/FLUX.1-Turbo-Alpha/blob/main/diffusion_pytorch_model.safetensors|FLUX.1-Turbo-Alpha.safetensors"
+    "https://huggingface.co/xiaozaa/catvton-flux-lora-alpha/resolve/main/pytorch_lora_weights.safetensors|CatVitOnLora.safetensors"
+    "https://huggingface.co/alimama-creative/FLUX.1-Turbo-Alpha/resolve/main/diffusion_pytorch_model.safetensors|FLUX.1-Turbo-Alpha.safetensors"
 )
 
 VAE_MODELS=()
 
 FLUX_VAE_MODELS=(
-    "https://huggingface.co/black-forest-labs/FLUX.1-dev/blob/main/vae/diffusion_pytorch_model.safetensors|ae.sft"
+    "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/vae/diffusion_pytorch_model.safetensors|ae.sft"
 )
 
 SEGFORMER_B3_CLOTHES=(
-    "https://huggingface.co/sayeed99/segformer_b3_clothes/blob/main/model.safetensors|segformer_b3_clothes.safetensors"
+    "https://huggingface.co/sayeed99/segformer_b3_clothes/resolve/main/model.safetensors|segformer_b3_clothes.safetensors"
 )
 
 CLIP_MODELS=(
@@ -102,7 +102,7 @@ CLIP_MODELS=(
 )
 
 CLIP_VISION=(
-    "https://huggingface.co/google/siglip-so400m-patch14-384/blob/main/model.safetensors|siglip-so400m-patch14-384.safetensors"
+    "https://huggingface.co/google/siglip-so400m-patch14-384/resolve/main/model.safetensors|siglip-so400m-patch14-384.safetensors"
 )
 
 ESRGAN_MODELS=(
@@ -110,22 +110,22 @@ ESRGAN_MODELS=(
 )
 
 CONTROLNET_MODELS=(
-    "https://huggingface.co/InstantX/FLUX.1-dev-Controlnet-Union/blob/main/diffusion_pytorch_model.safetensors|FLUX.1-dev-Controlnet-Unio.safetensors"
-    "https://huggingface.co/brad-twinkl/controlnet-union-sdxl-1.0-promax/blob/main/diffusion_pytorch_model.safetensors|controlnet-union-sdxl-1.0-promax.safetensors"
+    "https://huggingface.co/InstantX/FLUX.1-dev-Controlnet-Union/resolve/main/diffusion_pytorch_model.safetensors|FLUX.1-dev-Controlnet-Unio.safetensors"
+    "https://huggingface.co/brad-twinkl/controlnet-union-sdxl-1.0-promax/resolve/main/diffusion_pytorch_model.safetensors|controlnet-union-sdxl-1.0-promax.safetensors"
 )
 EMBEDDINGS=(
 "https://civitai.com/models/72437/baddream-unrealisticdream-negative-embeddings"
 )
 
 STYLE_MODELS=(
-    "https://huggingface.co/black-forest-labs/FLUX.1-Redux-dev/blob/main/flux1-redux-dev.safetensors|"
+    "https://huggingface.co/black-forest-labs/FLUX.1-Redux-dev/resolve/main/flux1-redux-dev.safetensors|"
 )
 
 IC_LIGHT_MODELS=(
-    "https://huggingface.co/huchenlei/IC-Light-ldm/blob/main/iclight_sd15_fc_unet_ldm.safetensors|"
+    "https://huggingface.co/huchenlei/IC-Light-ldm/resolve/main/iclight_sd15_fc_unet_ldm.safetensors|"
 )
 RESADAPTER_V2_SD15=(
-"https://huggingface.co/jiaxiangc/res-adapter/blob/main/resadapter_v2_sd1.5/pytorch_lora_weights.safetensors|resadapter_v2_sd1.5"
+"https://huggingface.co/jiaxiangc/res-adapter/resolve/main/resadapter_v2_sd1.5/pytorch_lora_weights.safetensors|resadapter_v2_sd1.5"
 )
 
 ### DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING ###
