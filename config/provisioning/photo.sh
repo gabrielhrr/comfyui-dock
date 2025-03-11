@@ -40,6 +40,14 @@ PIP_PACKAGES=(
     "spandrel"
     "peft"
     "torchvision"
+    "huggingface_hub"
+    "Image"
+    "einops"
+    "timm>=1.0.10"
+    "torch"
+    "pillow>=10.3.0"
+    "color-matcher"
+    "mss"
 )
 
 NODES=(
@@ -66,7 +74,7 @@ NODES=(
     "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes"
     "https://github.com/pythongosssss/ComfyUI-Custom-Scripts"
     "https://github.com/rgthree/rgthree-comfy"
-    "https://github.com/DoctorDiffusion/ComfyUI-BEN"
+    "https://github.com/PramaLLC/BEN2_ComfyUI.git"
     #"https://github.com/krich-cto/ComfyUI-Flow-Control"
 )
 
