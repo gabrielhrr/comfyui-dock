@@ -235,6 +235,7 @@ function provisioning_get_default_workflow() {
         fi
     fi
 }
+
 function provisioning_get_models() {
     local target_dir="$1"
     shift
@@ -257,7 +258,7 @@ function provisioning_get_models() {
             echo "Arquivo já existe: $file_path. Pulando download."
         else
             echo "Baixando $url como $new_name para $target_dir"
-            wget -O "$file_path" "$url"
+            provisioning_download "$url" "$target_dir"
         fi
     done
 }
