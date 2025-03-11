@@ -101,7 +101,9 @@ FLUX_VAE_MODELS=(
 )
 
 SEGFORMER_B3_CLOTHES=(
-    "https://huggingface.co/sayeed99/segformer_b3_clothes/resolve/main/model.safetensors|segformer_b3_clothes.safetensors"
+    "https://huggingface.co/sayeed99/segformer_b3_clothes/resolve/main/model.safetensors|model.safetensors"
+    "https://huggingface.co/sayeed99/segformer_b3_clothes/resolve/main/preprocessor_config.json?download=true|"
+    "https://huggingface.co/sayeed99/segformer_b3_clothes/resolve/main/config.json?download=true|"
 )
 
 CLIP_MODELS=(
