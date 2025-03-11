@@ -224,7 +224,7 @@ function provisioning_start() {
         "${WORKSPACE}ComfyUI/models/ultralytics/segm" \
         "${SEGM[@]}"
     provisioning_get_models \
-        "${WORKSPACE}ComfyUI/custom-nodes/BEN2_ComfyUI" \
+        "${WORKSPACE}ComfyUI/custom_nodes/BEN2_ComfyUI" \
         "${BEN2_MODELS[@]}"
     provisioning_print_end
 }
