@@ -332,10 +332,15 @@ function provisioning_download() {
         [[ -n $CIVITAI_TOKEN && $1 =~ ^https://([a-zA-Z0-9_-]+\.)?civitai\.com(/|$|\?) ]]; then
         auth_token="$CIVITAI_TOKEN"
     fi
-    if [[ -n $auth_token ]];then
-        wget -O "$3" --header="Authorization: Bearer $auth_token" -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$1"
+    if [[ -n $auth_token ]]; then
+        wget --header="Authorization: Bearer $auth_token" \
+             --content-disposition --show-progress -qnc \
+             -e dotbytes="${dotbytes:-4M}" \
+             -P "$2" -O "$2/$3" "$1"
     else
-        wget -O "$3" -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$1"
+        wget --content-disposition --show-progress -qnc \
+             -e dotbytes="${dotbytes:-4M}" \
+             -P "$2" -O "$2/$3" "$1"
     fi
 }
 
