@@ -235,29 +235,30 @@ function provisioning_get_default_workflow() {
         fi
     fi
 }
-
 function provisioning_get_models() {
     local target_dir="$1"
     shift
-    
-    for model_entry in "$@"; do
-        # Separa a URL do possível novo nome do arquivo usando `|`
-        url="${model_entry%%|*}"
-        new_name="${model_entry#*|}"
+    local models=("$@")
 
-        # Se `new_name` for igual a `model_entry`, significa que não havia `|`, então mantemos o nome original
-        if [[ "$new_name" == "$model_entry" ]]; then
-            new_name=""
-        fi
+    mkdir -p "$target_dir"
 
-        # Obtém o nome original do arquivo a partir da URL, se `new_name` estiver vazio
+    for model in "${models[@]}"; do
+        url="${model%%|*}"  # before |
+        new_name="${model##*|}"  # after |
+
         if [[ -z "$new_name" ]]; then
             new_name=$(basename "$url")
         fi
 
-        echo "Baixando $url como $new_name para $target_dir"
-        # Aqui você pode colocar o comando real para baixar o arquivo, por exemplo:
-        # wget -O "$target_dir/$new_name" "$url"
+        local file_path="$target_dir/$new_name"
+
+        # verify if file exists
+        if [[ -f "$file_path" ]]; then
+            echo "Arquivo já existe: $file_path. Pulando download."
+        else
+            echo "Baixando $url como $new_name para $target_dir"
+            wget -O "$file_path" "$url"
+        fi
     done
 }
 
