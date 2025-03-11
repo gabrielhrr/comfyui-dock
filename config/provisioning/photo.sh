@@ -247,18 +247,28 @@ function provisioning_get_models() {
         url="${model%%|*}"  # before |
         new_name="${model##*|}"  # after |
 
+        # Se a URL já tiver "?" (parâmetros), adiciona "&download=true", senão adiciona "?download=true"
+        if [[ "$url" != *"?download=true"* ]]; then
+            if [[ "$url" == *"?"* ]]; then
+                url="${url}&download=true"
+            else
+                url="${url}?download=true"
+            fi
+        fi
+
         if [[ -z "$new_name" ]]; then
             new_name=$(basename "$url")
+            new_name="${new_name%\?download=true}"  # Remove ?download=true
         fi
 
         local file_path="$target_dir/$new_name"
 
-        # verify if file exists
+        # Verifica se o arquivo já existe antes de baixar
         if [[ -f "$file_path" ]]; then
             echo "Arquivo já existe: $file_path. Pulando download."
         else
             echo "Baixando $url como $new_name para $target_dir"
-            provisioning_download "$url" "$target_dir"
+            provisioning_download "$url" "$target_dir" "$new_name"
         fi
     done
 }
@@ -306,7 +316,7 @@ function provisioning_has_valid_civitai_token() {
     fi
 }
 
-# Download from $1 URL to $2 file path
+# Download from $1 URL to $2 file path named "$3"
 function provisioning_download() {
     if [[ -n $HF_TOKEN && $1 =~ ^https://([a-zA-Z0-9_-]+\.)?huggingface\.co(/|$|\?) ]]; then
         auth_token="$HF_TOKEN"
@@ -315,9 +325,9 @@ function provisioning_download() {
         auth_token="$CIVITAI_TOKEN"
     fi
     if [[ -n $auth_token ]];then
-        wget --header="Authorization: Bearer $auth_token" -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$1"
+        wget -O "$3" --header="Authorization: Bearer $auth_token" -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$1"
     else
-        wget -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$1"
+        wget -O "$3" -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$1"
     fi
 }
 
