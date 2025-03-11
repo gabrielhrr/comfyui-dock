@@ -71,13 +71,13 @@ NODES=(
 )
 
 CHECKPOINT_MODELS=(
-    "https://huggingface.co/RunDiffusion/Juggernaut-XI-v11/resolve/main/Juggernaut-XI-byRunDiffusion.safetensor|"
-    "https://huggingface.co/moiu2998/mymo/resolve/main/realisticVisionV60B1_v51VAE.safetensors|"
+    "https://huggingface.co/RunDiffusion/Juggernaut-XI-v11/resolve/main/Juggernaut-XI-byRunDiffusion.safetensors?download=true|"
+    "https://huggingface.co/moiu2998/mymo/resolve/main/realisticVisionV60B1_v51VAE.safetensors?download=true|"
     )
 
 UNET_MODELS=(
-"https://huggingface.co/jackzheng/flux-fill-FP8/resolve/main/fluxFillFP8_v10.safetensors|"
-"https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/vae/diffusion_pytorch_model.safetensors|FLUX.1-dev"
+"https://huggingface.co/jackzheng/flux-fill-FP8/resolve/main/fluxFillFP8_v10.safetensors?download=true|"
+"https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/vae/diffusion_pytorch_model.safetensors?download=true|FLUX.1-dev"
 )
 
 LORA_MODELS=(
@@ -110,11 +110,11 @@ ESRGAN_MODELS=(
 )
 
 CONTROLNET_MODELS=(
-    "https://huggingface.co/InstantX/FLUX.1-dev-Controlnet-Union/resolve/main/diffusion_pytorch_model.safetensors|FLUX.1-dev-Controlnet-Unio.safetensors"
-    "https://huggingface.co/brad-twinkl/controlnet-union-sdxl-1.0-promax/resolve/main/diffusion_pytorch_model.safetensors|controlnet-union-sdxl-1.0-promax.safetensors"
+    "https://huggingface.co/InstantX/FLUX.1-dev-Controlnet-Union/resolve/main/diffusion_pytorch_model.safetensors?download=true|FLUX.1-dev-Controlnet-Unio.safetensors"
+    "https://huggingface.co/brad-twinkl/controlnet-union-sdxl-1.0-promax/resolve/main/diffusion_pytorch_model.safetensors?download=true|controlnet-union-sdxl-1.0-promax.safetensors"
 )
 EMBEDDINGS=(
-"https://civitai.com/models/72437/baddream-unrealisticdream-negative-embeddings"
+"https://civitai.com/models/72437/baddream-unrealisticdream-negative-embeddings|"
 )
 
 STYLE_MODELS=(
