@@ -120,7 +120,7 @@ ESRGAN_MODELS=(
 )
 
 CONTROLNET_MODELS=(
-    "https://huggingface.co/InstantX/FLUX.1-dev-Controlnet-Union/resolve/main/diffusion_pytorch_model.safetensors?download=true|FLUX.1-dev-Controlnet-Unio.safetensors"
+    "https://huggingface.co/InstantX/FLUX.1-dev-Controlnet-Union/resolve/main/diffusion_pytorch_model.safetensors?download=true|FLUX.1-dev-Controlnet-Union.safetensors"
     "https://huggingface.co/brad-twinkl/controlnet-union-sdxl-1.0-promax/resolve/main/diffusion_pytorch_model.safetensors?download=true|controlnet-union-sdxl-1.0-promax.safetensors"
 )
 EMBEDDINGS=(
