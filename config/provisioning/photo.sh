@@ -74,7 +74,7 @@ NODES=(
     "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes"
     "https://github.com/pythongosssss/ComfyUI-Custom-Scripts"
     "https://github.com/rgthree/rgthree-comfy"
-    "https://github.com/PramaLLC/BEN2_ComfyUI.git"
+    "https://github.com/PramaLLC/BEN2_ComfyUI"
     "http://github.com/marhensa/sdxl-recommended-res-calc"
     #"https://github.com/krich-cto/ComfyUI-Flow-Control"
 )
