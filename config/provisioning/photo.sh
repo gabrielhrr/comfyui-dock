@@ -154,6 +154,11 @@ SEGM=(
     "https://huggingface.co/Bingsu/adetailer/resolve/main/person_yolov8m-seg.pt?download=true|"
 )
 
+BEN2_MODELS=(
+    "https://huggingface.co/PramaLLC/BEN2/resolve/main/BEN2_Base.pth?download=true|"
+    "https://huggingface.co/PramaLLC/BEN2/resolve/main/BEN2.py?download=true|"
+)
+
 ### DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING ###
 
 function provisioning_start() {
@@ -218,6 +223,9 @@ function provisioning_start() {
     provisioning_get_models \
         "${WORKSPACE}ComfyUI/models/ultralytics/segm" \
         "${SEGM[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}ComfyUI/custom-nodes/BEN2_ComfyUI" \
+        "${BEN2_MODELS[@]}"
     provisioning_print_end
 }
 
