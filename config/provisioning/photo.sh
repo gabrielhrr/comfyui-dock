@@ -75,6 +75,7 @@ NODES=(
     "https://github.com/pythongosssss/ComfyUI-Custom-Scripts"
     "https://github.com/rgthree/rgthree-comfy"
     "https://github.com/PramaLLC/BEN2_ComfyUI.git"
+    "http://github.com/marhensa/sdxl-recommended-res-calc"
     #"https://github.com/krich-cto/ComfyUI-Flow-Control"
 )
 
@@ -139,6 +140,20 @@ RESADAPTER_V2_SD15=(
 "https://huggingface.co/jiaxiangc/res-adapter/resolve/main/resadapter_v2_sd1.5/pytorch_lora_weights.safetensors|resadapter_v2_sd1.5"
 )
 
+SAMS=(
+"https://huggingface.co/segments-arnaud/sam_vit_b/resolve/main/sam_vit_b_01ec64.pth?download=true|sam_vit_b.pth"
+)
+
+BBOX=(
+    "https://huggingface.co/Bingsu/adetailer/resolve/main/face_yolov8m.pt?download=true|"
+    "https://huggingface.co/Bingsu/adetailer/resolve/main/face_yolov9c.pt?download=true|"
+    "https://huggingface.co/Bingsu/adetailer/resolve/main/hand_yolov8s.pt?download=true|"
+)
+
+SEGM=(
+    "https://huggingface.co/Bingsu/adetailer/resolve/main/person_yolov8m-seg.pt?download=true|"
+)
+
 ### DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING ###
 
 function provisioning_start() {
@@ -194,6 +209,15 @@ function provisioning_start() {
     provisioning_get_models \
         "${WORKSPACE}ComfyUI/models/res-adapter/resadapter_v2_sd1.5" \
         "${RESADAPTER_V2_SD15[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}ComfyUI/models/sams" \
+        "${SAMS[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}ComfyUI/models/ultralytics/bbox" \
+        "${BBOX[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}ComfyUI/models/ultralytics/segm" \
+        "${SEGM[@]}"
     provisioning_print_end
 }
 
