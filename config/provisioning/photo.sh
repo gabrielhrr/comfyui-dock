@@ -142,46 +142,46 @@ function provisioning_start() {
     provisioning_get_nodes
     provisioning_get_pip_packages
     provisioning_get_models \
-        "${WORKSPACE}/ComfyUI/models/checkpoints" \
+        "${WORKSPACE}ComfyUI/models/checkpoints" \
         "${CHECKPOINT_MODELS[@]}"
     provisioning_get_models \
-        "${WORKSPACE}/ComfyUI/models/unet" \
+        "${WORKSPACE}ComfyUI/models/unet" \
         "${UNET_MODELS[@]}"
     provisioning_get_models \
-        "${WORKSPACE}/ComfyUI/models/lora" \
+        "${WORKSPACE}ComfyUI/models/lora" \
         "${LORA_MODELS[@]}"
     provisioning_get_models \
-        "${WORKSPACE}/ComfyUI/models/controlnet" \
+        "${WORKSPACE}ComfyUI/models/controlnet" \
         "${CONTROLNET_MODELS[@]}"
     provisioning_get_models \
-        "${WORKSPACE}/ComfyUI/models/embeddings" \
+        "${WORKSPACE}ComfyUI/models/embeddings" \
         "${EMBEDDINGS[@]}"
     provisioning_get_models \
-        "${WORKSPACE}/ComfyUI/models/vae" \
+        "${WORKSPACE}ComfyUI/models/vae" \
         "${VAE_MODELS[@]}"
     provisioning_get_models \
-        "${WORKSPACE}/ComfyUI/models/clip" \
+        "${WORKSPACE}ComfyUI/models/clip" \
         "${CLIP_MODELS[@]}"
     provisioning_get_models \
-        "${WORKSPACE}/ComfyUI/models/vae/FLUX1" \
+        "${WORKSPACE}ComfyUI/models/vae/FLUX1" \
         "${FLUX_VAE_MODELS[@]}"
     provisioning_get_models \
-        "${WORKSPACE}/ComfyUI/models/clip_vision" \
+        "${WORKSPACE}ComfyUI/models/clip_vision" \
         "${CLIP_VISION[@]}"
     provisioning_get_models \
-        "${WORKSPACE}/ComfyUI/models/segformer_b3_clothes" \
+        "${WORKSPACE}ComfyUI/models/segformer_b3_clothes" \
         "${SEGFORMER_B3_CLOTHES[@]}"
     provisioning_get_models \
-        "${WORKSPACE}/ComfyUI/models/esrgan" \
+        "${WORKSPACE}ComfyUI/models/esrgan" \
         "${ESRGAN_MODELS[@]}"
     provisioning_get_models \
-        "${WORKSPACE}/ComfyUI/models/style_models" \
+        "${WORKSPACE}ComfyUI/models/style_models" \
         "${STYLE_MODELS[@]}"
     provisioning_get_models \
-        "${WORKSPACE}/ComfyUI/models/unet/IC_Light" \
+        "${WORKSPACE}ComfyUI/models/unet/IC_Light" \
         "${IC_LIGHT_MODEL[@]}"
     provisioning_get_models \
-        "${WORKSPACE}/ComfyUI/models/res-adapter/resadapter_v2_sd1.5" \
+        "${WORKSPACE}ComfyUI/models/res-adapter/resadapter_v2_sd1.5" \
         "${RESADAPTER_V2_SD15[@]}"
     provisioning_print_end
 }
