@@ -179,7 +179,7 @@ function provisioning_start() {
         "${WORKSPACE}ComfyUI/models/unet" \
         "${UNET_MODELS[@]}"
     provisioning_get_models \
-        "${WORKSPACE}ComfyUI/models/lora" \
+        "${WORKSPACE}ComfyUI/models/loras" \
         "${LORA_MODELS[@]}"
     provisioning_get_models \
         "${WORKSPACE}ComfyUI/models/controlnet" \
@@ -209,7 +209,7 @@ function provisioning_start() {
         "${WORKSPACE}ComfyUI/models/style_models" \
         "${STYLE_MODELS[@]}"
     provisioning_get_models \
-        "${WORKSPACE}ComfyUI/models/unet/IC_Light" \
+        "${WORKSPACE}ComfyUI/models/unet/IC-Light" \
         "${IC_LIGHT_MODELS[@]}"
     provisioning_get_models \
         "${WORKSPACE}ComfyUI/models/res-adapter/resadapter_v2_sd1.5" \
