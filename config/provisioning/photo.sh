@@ -86,7 +86,7 @@ CHECKPOINT_MODELS=(
 
 UNET_MODELS=(
 "https://huggingface.co/jackzheng/flux-fill-FP8/resolve/main/fluxFillFP8_v10.safetensors?download=true|"
-"https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/flux1-dev.safetensors?download=true|FLUX.1-dev"
+"https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/flux1-dev.safetensors?download=true|FLUX.1-dev.safetensors"
 )
 
 LORA_MODELS=(
