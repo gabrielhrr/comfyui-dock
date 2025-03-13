@@ -76,6 +76,9 @@ NODES=(
     "https://github.com/rgthree/rgthree-comfy"
     "https://github.com/PramaLLC/BEN2_ComfyUI"
     "http://github.com/marhensa/sdxl-recommended-res-calc"
+    "https://github.com/ssitu/ComfyUI_UltimateSDUpscale"
+    "https://github.com/evanspearman/ComfyMath"
+    "https://github.com/jamesWalker55/comfyui-various" #outpainting
     #"https://github.com/krich-cto/ComfyUI-Flow-Control"
 )
 
