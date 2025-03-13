@@ -96,6 +96,7 @@ LORA_MODELS=(
     #"https://civitai.com/api/download/models/16576"
     "https://huggingface.co/xiaozaa/catvton-flux-lora-alpha/resolve/main/pytorch_lora_weights.safetensors|CatVitOnLora.safetensors"
     "https://huggingface.co/alimama-creative/FLUX.1-Turbo-Alpha/resolve/main/diffusion_pytorch_model.safetensors|FLUX.1-Turbo-Alpha.safetensors"
+    "https://huggingface.co/camenduru/FLUX.1-dev/resolve/main/IC_TRY_ON_v3_e4.safetensors?download=true"
 )
 
 VAE_MODELS=()
@@ -119,7 +120,7 @@ CLIP_VISION=(
     "https://huggingface.co/google/siglip-so400m-patch14-384/resolve/main/model.safetensors|siglip-so400m-patch14-384.safetensors"
 )
 
-ESRGAN_MODELS=(
+UPSCALE_MODELS=(
    "https://huggingface.co/ai-forever/Real-ESRGAN/resolve/main/RealESRGAN_x4.pth|"
 )
 
@@ -206,8 +207,8 @@ function provisioning_start() {
         "${WORKSPACE}ComfyUI/models/segformer_b3_clothes" \
         "${SEGFORMER_B3_CLOTHES[@]}"
     provisioning_get_models \
-        "${WORKSPACE}ComfyUI/models/esrgan" \
-        "${ESRGAN_MODELS[@]}"
+        "${WORKSPACE}ComfyUI/models/upscale_models" \
+        "${UPSCALE_MODELS[@]}"
     provisioning_get_models \
         "${WORKSPACE}ComfyUI/models/style_models" \
         "${STYLE_MODELS[@]}"
