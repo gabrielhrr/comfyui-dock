@@ -203,7 +203,7 @@ function provisioning_get_nodes() {
         if [[ -d $path ]]; then
             if [[ ${AUTO_UPDATE,,} != "false" ]]; then
                 printf "Updating node: %s...\n" "${repo}"
-                ( cd "$path" && git pull )
+                ( cd "$path" && git pull && git submodule update --init --recursive )
                 if [[ -e $requirements ]]; then
                    pip_install -r "$requirements"
                 fi
