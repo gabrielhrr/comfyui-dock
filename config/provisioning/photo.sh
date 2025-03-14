@@ -14,40 +14,7 @@ APT_PACKAGES=(
 )
 
 PIP_PACKAGES=(
-    "insightface"
-    "open_clip_torch"
-    "matplotlib"
-    "scikit-learn"
-    "gguf"
-    "openai"
-    "accelerate"
-    "pyOpenSSL"
-    "facexlib"
-    "webcolors"
-    "toml"
-    "scikit-image"
-    "piexif"
-    "opencv-python-headless"
-    "scipy>=1.11.4"
-    "numpy<2"
-    "dill"
-    "diffusers"
-    "clip_interrogator>=0.6.0"
-    "lark"
-    "onnxruntime"
-    "opencv-python"
-    "sentencepiece"
-    "spandrel"
-    "peft"
-    "torchvision"
-    "huggingface_hub"
-    "Image"
-    "einops"
-    "timm>=1.0.10"
-    "torch"
-    "pillow>=10.3.0"
     "color-matcher"
-    "mss"
 )
 
 NODES=(
@@ -259,7 +226,7 @@ function provisioning_get_nodes() {
         if [[ -d $path ]]; then
             if [[ ${AUTO_UPDATE,,} != "false" ]]; then
                 printf "Updating node: %s...\n" "${repo}"
-                ( cd "$path" && git pull )
+                ( cd "$path" && git pull && git submodule update --init --recursive )
                 if [[ -e $requirements ]]; then
                    pip_install -r "$requirements"
                 fi
