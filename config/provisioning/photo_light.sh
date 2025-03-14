@@ -72,7 +72,7 @@ UPSCALE_MODELS=(
 )
 
 CONTROLNET_MODELS=(
-    "https://huggingface.co/brad-twinkl/controlnet-union-sdxl-1.0-promax/resolve/main/diffusion_pytorch_model.safetensors?download=true|controlnet-union-sdxl-1.0-promax.safetensors"
+    "https://huggingface.co/brad-twinkl/controlnet-union-sdxl-1.0-promax/resolve/main/diffusion_pytorch_model.safetensors?download=true|controlnet_union_sdxl_promax.safetensors"
 )
 EMBEDDINGS=(
 )

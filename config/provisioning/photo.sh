@@ -93,7 +93,7 @@ UPSCALE_MODELS=(
 
 CONTROLNET_MODELS=(
     "https://huggingface.co/InstantX/FLUX.1-dev-Controlnet-Union/resolve/main/diffusion_pytorch_model.safetensors?download=true|FLUX.1-dev-Controlnet-Union.safetensors"
-    "https://huggingface.co/brad-twinkl/controlnet-union-sdxl-1.0-promax/resolve/main/diffusion_pytorch_model.safetensors?download=true|controlnet-union-sdxl-1.0-promax.safetensors"
+    "https://huggingface.co/brad-twinkl/controlnet-union-sdxl-1.0-promax/resolve/main/diffusion_pytorch_model.safetensors?download=true|controlnet_union_sdxl_promax.safetensors"
 )
 EMBEDDINGS=(
 "https://civitai.com/models/72437/baddream-unrealisticdream-negative-embeddings|"
