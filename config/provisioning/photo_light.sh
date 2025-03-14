@@ -31,7 +31,7 @@ NODES=(
     "https://github.com/rgthree/rgthree-comfy"
     "https://github.com/cubiq/ComfyUI_essentials"
     "https://github.com/ltdrdata/ComfyUI-Impact-Pack"
-    "https://github.com/ltdrdata/ComfyUI-Impact-Sub"
+    "https://github.com/ltdrdata/ComfyUI-Impact-Subpack"
     "https://github.com/VykosX/ControlFlowUtils"
     "https://github.com/pythongosssss/ComfyUI-Custom-Scripts"
     "https://github.com/yolain/ComfyUI-Easy-Use"
