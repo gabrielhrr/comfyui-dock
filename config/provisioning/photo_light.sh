@@ -17,7 +17,7 @@ PIP_PACKAGES=(
     "color-matcher"
 )
 
-NODES(
+NODES=(
     "https://github.com/Acly/comfyui-tooling-nodes"
     "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes"
     "https://github.com/WASasquatch/was-node-suite-comfyui"
