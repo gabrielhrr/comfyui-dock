@@ -24,6 +24,7 @@ NODES=(
     "https://github.com/ltdrdata/ComfyUI-Impact-Subpack"
     "https://github.com/gseth/ControlAltAI-Nodes"
     "https://github.com/jamesWalker55/comfyui-various"
+    "https://github.com/pythongosssss/ComfyUI-Custom-Scripts"
 )
 
 CHECKPOINT_MODELS=(
