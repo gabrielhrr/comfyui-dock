@@ -21,6 +21,7 @@ NODES=(
     "https://github.com/marhensa/sdxl-recommended-res-calc"
     "https://github.com/evanspearman/ComfyMath"
     "https://github.com/rgthree/rgthree-comfy"
+    "https://github.com/Acly/comfyui-tooling-nodes"
 
 )
 
