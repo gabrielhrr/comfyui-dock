@@ -19,6 +19,9 @@ PIP_PACKAGES=(
 NODES=(
     "https://github.com/ssitu/ComfyUI_UltimateSDUpscale"
     "https://github.com/marhensa/sdxl-recommended-res-calc"
+    "https://github.com/evanspearman/ComfyMath"
+    "https://github.com/rgthree/rgthree-comfy"
+
 )
 
 CHECKPOINT_MODELS=(
