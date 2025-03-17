@@ -47,6 +47,7 @@ CLIP_VISION=(
 )
 
 UPSCALE_MODELS=(
+   "https://huggingface.co/ai-forever/Real-ESRGAN/resolve/main/RealESRGAN_x4.pth|"
 )
 
 CONTROLNET_MODELS=(
