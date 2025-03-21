@@ -25,7 +25,7 @@ NODES=(
     "https://github.com/city96/ComfyUI-GGUF"
     "https://github.com/TinyTerra/ComfyUI_tinyterraNodes"
     "https://github.com/lrzjason/Comfyui-In-Context-Lora-Utils"
-    "https://github.com/cubiq/ComfyUI_essentials.git"
+    "https://github.com/Acly/comfyui-tooling-nodes"
 )
 
 CHECKPOINT_MODELS=(
