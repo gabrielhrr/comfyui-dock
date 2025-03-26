@@ -26,6 +26,7 @@ NODES=(
     "https://github.com/TinyTerra/ComfyUI_tinyterraNodes"
     "https://github.com/lrzjason/Comfyui-In-Context-Lora-Utils"
     "https://github.com/Acly/comfyui-tooling-nodes"
+    "https://github.com/welltop-cn/ComfyUI-TeaCache"
 )
 
 CHECKPOINT_MODELS=(
