@@ -39,7 +39,8 @@ LORA_MODELS=(
     #"https://civitai.com/api/download/models/16576"
     "https://huggingface.co/xiaozaa/catvton-flux-lora-alpha/resolve/main/pytorch_lora_weights.safetensors|CatVitOnLora.safetensors"
     "https://huggingface.co/alimama-creative/FLUX.1-Turbo-Alpha/resolve/main/diffusion_pytorch_model.safetensors|FLUX.1-Turbo-Alpha.safetensors"
-    "https://huggingface.co/camenduru/FLUX.1-dev/resolve/main/IC_TRY_ON_v3_e4.safetensors?download=true"
+    "https://huggingface.co/camenduru/FLUX.1-dev/resolve/main/IC_TRY_ON_v3_e4.safetensors?download=true|"
+    "https://huggingface.co/ali-vilab/ACE_Plus/blob/main/portrait/comfyui_portrait_lora64.safetensors|"
 )
 
 VAE_MODELS=()
