@@ -37,9 +37,9 @@ UNET_MODELS=(
 )
 
 LORA_MODELS=(
-    "https://civitai.com/api/download/models/801986?type=Model&format=SafeTensor|vector-art.safetensors"
-    "https://civitai.com/models/753081/snap-schnell-flux1s-lora|snap.safetensors"
-    "https://civitai.com/api/download/models/1590102?type=Model&format=SafeTensor|vntg80_photo.safetensors"
+    "https://civitai.com/models/717172/vector-art-schnell-flux-lora|"
+    "https://civitai.com/models/753081/snap-schnell-flux1s-lora|"
+    "https://civitai.com/models/1381703?modelVersionId=1590102|vntg80_photo"
 )
 
 VAE_MODELS=()
