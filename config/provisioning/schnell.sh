@@ -33,27 +33,22 @@ CHECKPOINT_MODELS=(
     )
 
 UNET_MODELS=(
-"https://huggingface.co/jackzheng/flux-fill-FP8/resolve/main/fluxFillFP8_v10.safetensors?download=true|"
+"https://huggingface.co/black-forest-labs/FLUX.1-schnell/resolve/main/flux1-schnell.safetensors?download=true|"
 )
 
 LORA_MODELS=(
-    #"https://civitai.com/api/download/models/16576"
-    "https://huggingface.co/xiaozaa/catvton-flux-lora-alpha/resolve/main/pytorch_lora_weights.safetensors|CatVitOnLora.safetensors"
-    "https://huggingface.co/alimama-creative/FLUX.1-Turbo-Alpha/resolve/main/diffusion_pytorch_model.safetensors|FLUX.1-Turbo-Alpha.safetensors"
-    "https://huggingface.co/camenduru/FLUX.1-dev/resolve/main/IC_TRY_ON_v3_e4.safetensors?download=true|"
-    "https://huggingface.co/ali-vilab/ACE_Plus/resolve/main/portrait/comfyui_portrait_lora64.safetensors?download=true|"
+    "https://civitai.com/api/download/models/801986?type=Model&format=SafeTensor"
+    "https://civitai.com/models/753081/snap-schnell-flux1s-lora"
+    "https://civitai.com/api/download/models/1590102?type=Model&format=SafeTensor"
 )
 
 VAE_MODELS=()
 
 FLUX_VAE_MODELS=(
-    "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/vae/diffusion_pytorch_model.safetensors|ae.sft"
+    "https://huggingface.co/black-forest-labs/FLUX.1-schnell/resolve/main/ae.safetensors?download=true|ae.sft"
 )
 
 SEGFORMER_B3_CLOTHES=(
-    "https://huggingface.co/sayeed99/segformer_b3_clothes/resolve/main/model.safetensors|model.safetensors"
-    "https://huggingface.co/sayeed99/segformer_b3_clothes/resolve/main/preprocessor_config.json?download=true|"
-    "https://huggingface.co/sayeed99/segformer_b3_clothes/resolve/main/config.json?download=true|"
 )
 
 CLIP_MODELS=(
@@ -62,7 +57,6 @@ CLIP_MODELS=(
 )
 
 CLIP_VISION=(
-    "https://huggingface.co/google/siglip-so400m-patch14-384/resolve/main/model.safetensors|siglip-so400m-patch14-384.safetensors"
 )
 
 UPSCALE_MODELS=(
