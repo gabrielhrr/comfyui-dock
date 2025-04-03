@@ -37,7 +37,7 @@ UNET_MODELS=(
 )
 
 LORA_MODELS=(
-    "https://civitai.com/api/download/models/801986?type=Model&format=SafeTensor|vector-art.safetensors"
+    "https://civitai.com/api/download/models/801986?type=Model&format=SafeTensor|vector_art.safetensors"
     "https://civitai.com/api/download/models/842126?type=Model&format=SafeTensor|snap.safetensors"
     "https://civitai.com/api/download/models/1590102?type=Model&format=SafeTensor|vntg80_photo.safetensors"
 )
@@ -292,22 +292,33 @@ function provisioning_has_valid_civitai_token() {
 
 # Download from $1 URL to $2 file path named "$3"
 function provisioning_download() {
-    if [[ -n $HF_TOKEN && $1 =~ ^https://([a-zA-Z0-9_-]+\.)?huggingface\.co(/|$|\?) ]]; then
+    local url="$1"
+    local target_dir="$2"
+    local filename="$3"
+
+    # Define o token de autenticação baseado na origem do arquivo
+    if [[ -n $HF_TOKEN && $url =~ ^https://([a-zA-Z0-9_-]+\.)?huggingface\.co(/|$|\?) ]]; then
         auth_token="$HF_TOKEN"
-    elif 
-        [[ -n $CIVITAI_TOKEN && $1 =~ ^https://([a-zA-Z0-9_-]+\.)?civitai\.com(/|$|\?) ]]; then
-        auth_token="$CIVITAI_TOKEN"
+    elif [[ -n $CIVITAI_TOKEN && $url =~ ^https://([a-zA-Z0-9_-]+\.)?civitai\.com(/|$|\?) ]]; then
+        # Reformata a URL para seguir o padrão correto do CivitAI
+        model_id=$(echo "$url" | grep -oE '[0-9]+')
+        url="https://civitai.com/api/download/models/${model_id}?type=Model&format=SafeTensor&token=${CIVITAI_TOKEN}"
+        auth_token=""
     fi
+
+    # Cria o diretório de destino, se necessário
+    mkdir -p "$target_dir"
+
+    # Faz o download do arquivo
     if [[ -n $auth_token ]]; then
         wget --header="Authorization: Bearer $auth_token" \
              --content-disposition --show-progress -qnc \
              -e dotbytes="${dotbytes:-4M}" \
-             -P "$2" -O "$2/$3" "$1"
+             -P "$target_dir" -O "$target_dir/$filename" "$url"
     else
         wget --content-disposition --show-progress -qnc \
              -e dotbytes="${dotbytes:-4M}" \
-             -P "$2" -O "$2/$3" "$1"
+             -P "$target_dir" -O "$target_dir/$filename" "$url"
     fi
 }
-
 provisioning_start
