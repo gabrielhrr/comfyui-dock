@@ -21,6 +21,9 @@ NODES=(
     "https://github.com/cubiq/ComfyUI_essentials"
     "https://github.com/Fannovel16/comfyui_controlnet_aux"
     "https://github.com/Acly/comfyui-tooling-nodes"
+    "https://github.com/rgthree/rgthree-comfy"
+    "https://github.com/yolain/ComfyUI-Easy-Use"
+
 )
 
 CHECKPOINT_MODELS=(
